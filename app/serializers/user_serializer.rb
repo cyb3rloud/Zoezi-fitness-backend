@@ -1,3 +1,3 @@
 class TransactionSerializer < ActiveModel::Serializer
-  attributes :id, :records
+  attributes :id, :firstname, :lastname, :gender, :age, :contact, :email, :password
 end
