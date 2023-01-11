@@ -8,9 +8,8 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string  :password
       t.integer :contact
       t.integer :age
-      t.string  :weight
       t.string  :height
-      t.string  :target_height
+      t.string  :current_weight
       t.string  :user_goal
       t.timestamps
     end
