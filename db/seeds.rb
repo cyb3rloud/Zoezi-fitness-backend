@@ -533,7 +533,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "be healthier"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -545,7 +545,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "lose weight"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -557,7 +557,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "be healthier"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -569,7 +569,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "be healthier"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -581,7 +581,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal:"get fit"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -593,7 +593,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal:"lose weight"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -605,7 +605,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal:"get fit"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -617,7 +617,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal:"get stronger"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -629,7 +629,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal:"get stronger"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -641,7 +641,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "get fit"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -653,7 +653,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "lose weight"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -665,7 +665,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "lose weight"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -677,7 +677,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "get stronger"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -689,7 +689,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "lose weight"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -701,7 +701,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "Get fit"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -713,7 +713,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "Get fit"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -725,7 +725,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal:"Lose weight"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -737,7 +737,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal:"Get fit"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -749,7 +749,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal:"Be healthier"
     },
     {
         firstname:  Faker::Name.first_name,
@@ -761,7 +761,7 @@ User.create ([
         weight: rand(30...300)
         height:
         target_height:
-        user_goal:
+        user_goal: "loose weight"
     } 
     
 ])
@@ -773,7 +773,7 @@ Exercise.create ([
         user_id: rand(1...20),
         workout_id: rand(1...5),
         date:Faker::Date.forward(days: 20),
-        time_start:,
+        time_start: ,
         time_end:,
     },
     {
