@@ -25,7 +25,7 @@ class ExercisesController < ApplicationController
     private 
 
     def work_out_params
-        params.permit(:activity, :muscle_group)
+        params.permit(:activity, :muscle_group, :exercise_name)
     end
 
 end
