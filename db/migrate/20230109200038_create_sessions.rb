@@ -5,8 +5,8 @@ class CreateSessions < ActiveRecord::Migration[7.0]
       t.integer :trainer_id
       t.integer :user_id
       t.string :date
-      t.time :time_start
-      t.time :time_end
+      t.time :session_start
+      t.time :session_end
       t.timestamps
     
     end
