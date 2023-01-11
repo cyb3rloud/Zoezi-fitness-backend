@@ -773,8 +773,8 @@ Exercise.create ([
         user_id: rand(1...20),
         workout_id: rand(1...5),
         date:Faker::Date.forward(days: 20),
-        time_start: ,
-        time_end:,
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
     },
     {
         exercise_name:"steady state",
@@ -782,8 +782,8 @@ Exercise.create ([
         user_id:rand(1...20),
         workout_id: rand(1...5),
         date:Faker::Date.forward(days: 20),
-        time_start:,
-        time_end:,
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+        time_end:, Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon)
     },
     {
         exercise_name: "Flexibility training",
@@ -791,8 +791,8 @@ Exercise.create ([
         user_id: rand(1...20),
         workout_id:rand(1...5),
         date:Faker::Date.forward(days: 20),
-        time_start:,
-        time_end:,
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
     },
     {
         exercise_name:"Low- and moderate intensity",
@@ -800,8 +800,8 @@ Exercise.create ([
         user_id: rand(1...20),
         workout_id:rand(1...5),
         date:Faker::Date.forward(days: 20),
-        time_start:,
-        time_end:,
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
     },
     {
         exercise_name:"High-intensity and intervals",
@@ -809,8 +809,8 @@ Exercise.create ([
         user_id: rand(1...20),
         workout_id: rand(1...5),
         date:Faker::Date.forward(days: 20),
-        time_start:,
-        time_end:,
+        time_start:Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        time_end:Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
     },
     {
         exercise_name: "Weight training",
@@ -818,8 +818,8 @@ Exercise.create ([
         user_id:rand(1...20),
         workout_id: rand(1...5),
         date:Faker::Date.forward(days: 20),
-        time_start:,
-        time_end:,
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
     }
 ])
 
@@ -828,29 +828,29 @@ Session.create ([
         trainer_id: rand(1...10),
         user_id: rand(1...20),
         date: Faker::Date.forward(days: 20),
-        session_start: ,
-        session_end: ,
+        session_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        session_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
     },
     {
         trainer_id: rand(1...10),
         user_id: rand(1...20),
         date: ,
-        session_start: ,
-        session_end: ,
+        session_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        session_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
     },
     {
         trainer_id: rand(1...10),
         user_id: rand(1...20),
         date: ,
-        session_start: ,
-        session_end: ,
+        session_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+        session_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
     },
     {
         trainer_id: rand(1...10),
         user_id: rand(1...20),
         date: ,
-        session_start: ,
-        session_end: ,
+        session_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+        session_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
     },
 ])
 Testmonial.create ([
