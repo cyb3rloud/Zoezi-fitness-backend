@@ -5,6 +5,7 @@ class CreateExercises < ActiveRecord::Migration[7.0]
       t.string :exercise_name
       t.integer :trainer_id
       t.integer :user_id
+      t.integer :workout_id
       t.string :date
       t.time :time_start
       t.time :time_end
