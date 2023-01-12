@@ -13,88 +13,68 @@ Trainer.create([
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type ,
         email: "trainer1@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },{
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type, 
         email: "trainer2@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type,
         email: "trainer3@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type, 
         email: "trainer4@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type, 
         email: "trainer5@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type, 
         email: "trainer6@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },{
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type, 
         email: "trainer7@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type, 
         email: "trainer8@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type, 
         email: "trainer9@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        age: rand(19...28),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
-        gender: Faker::Gender.binary_type, 
         email: "trainer12@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     }
