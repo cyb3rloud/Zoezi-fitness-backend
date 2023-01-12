@@ -1,22 +1,26 @@
 class WorkoutsController < ApplicationController
     def index
-        todayworkouts = @client.workouts
-        render json: todayworkouts
+        all_workouts = Workout.all
+        render json: all_workouts, status: :ok
     end
 
     def show
-        workout = @user.workouts.find(params[:id])
-        render json: workout
+        workout = find_course
+        render json: workout, status: :ok
     end
 
     def create
-        workout = @user.workouts.create!(obj_params)
+        workout = workouts.create!(obj_params)
         render json: workout, status: :created 
     end
 
     private
 
+    def find_course
+        Workout.find(params[:id])
+    end
+
     def obj_params
-        params.permit(:activity, :muscle_group, :reps, :sets, :user_id, :image)
+        params.permit(:activity, :muscle_group, :reps, :sets, :client_id, :image)
     end
 end
