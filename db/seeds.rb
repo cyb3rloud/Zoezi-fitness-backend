@@ -5,3 +5,473 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require 'faker'
+puts "🌱 Seeding..."
+
+Trainer.create([
+    {
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer1@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    },{
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer2@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer3@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer4@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer5@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer6@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    },{
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer7@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer8@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer9@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname:  Faker::Name.last_name,
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        email: "trainer12@zoezi.com",
+        password: Faker::Alphanumeric.alphanumeric(number: 10)
+    }
+])
+
+User.create ([
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client1@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "be healthier"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client2@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "lose weight"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client3@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "be healthier"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client4@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "be healthier"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client5@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal:"get fit"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client6@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal:"lose weight"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client7@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal:"get fit"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client8@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal:"get stronger"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client9@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal:"get stronger"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client10@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "get fit"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client11@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "lose weight"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client12@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "lose weight"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client13@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "get stronger"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client14@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "lose weight"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client15@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "Get fit"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client16@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "Get fit"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client17@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal:"Lose weight"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client18@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal:"Get fit"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client19@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height: Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal:"Be healthier"
+    },
+    {
+        firstname:  Faker::Name.first_name,
+        lastname: Faker::Name.last_name,
+        email: "client20@zoezi.com",
+        password:  Faker::Alphanumeric.alphanumeric(number: 10),
+        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        age: rand(15...55),
+        weight: rand(30...300),
+        height:Faker::Measurement.height,
+        current_weight: Faker::Measurement.weight,
+        user_goal: "lose weight"
+    } 
+    
+])
+
+Exercise.create ([
+    {
+        exercise_name:"cardio training",
+        muscle_group: "shoulders, back, abdominals",
+        activity: "Side planks",
+        trainer_id:rand(1...5),
+        user_id: rand(1...20),
+        workout_id: rand(1...5),
+        date:Faker::Date.forward(days: 20),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+    },
+    {
+        exercise_name:"steady state",
+        muscle_group: "abdominals, arms, legs, and back",
+        activity: "Single-leg deadlifts",
+        trainer_id:rand(1...10),
+        user_id:rand(1...20),
+        workout_id: rand(1...5),
+        date:Faker::Date.forward(days: 20),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon)
+    },
+    {
+        exercise_name: "Flexibility training",
+        muscle_group: "abdominals, arms, and back",
+        activity: "Dumbbell rows",
+        trainer_id: rand(1...10),
+        user_id: rand(1...20),
+        workout_id:rand(1...5),
+        date:Faker::Date.forward(days: 20),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+    },
+    {
+        exercise_name:"Low- and moderate intensity",
+        muscle_group: "abdominals, legs, and back",
+        activity: "squats",
+        trainer_id:rand(1...10),
+        user_id: rand(1...20),
+        workout_id:rand(1...5),
+        date:Faker::Date.forward(days: 20),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+    },
+    {
+        exercise_name:"High-intensity and intervals",
+        muscle_group: "arms",
+        activity: "pushups",
+        trainer_id: rand(1...10),
+        user_id: rand(1...20),
+        workout_id: rand(1...5),
+        date:Faker::Date.forward(days: 20),
+        time_start:Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        time_end:Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+    },
+    {
+        exercise_name: "Weight training",
+        muscle_group: "legs",
+        activity: "lunges",
+        trainer_id: rand(1...10),
+        user_id:rand(1...20),
+        workout_id: rand(1...5),
+        date:Faker::Date.forward(days: 20),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+    }
+])
+
+Schedule.create ([
+    {
+        trainer_id: rand(1...10),
+        user_id: rand(1...20),
+        date: Faker::Date.forward(days: 1),
+        session_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        session_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+    },
+    {
+        trainer_id: rand(1...10),
+        user_id: rand(1...20),
+        date: Faker::Date.forward(days: 2),
+        session_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        session_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+    },
+    {
+        trainer_id: rand(1...10),
+        user_id: rand(1...20),
+        date: Faker::Date.forward(days: 3),
+        session_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+        session_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+    },
+    {
+        trainer_id: rand(1...10),
+        user_id: rand(1...20),
+        date: Faker::Date.forward(days: 3),
+        session_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+        session_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+    },
+])
+Testmonial.create ([
+    {
+        testimony: "I have been with Zoezi Fitness  for one week.  Since joining I am eating healthier and the coaching helps motivate me and the coaches keep encouraging me to do my best!!!  I love the cookbook they gave me because the recipes are simple and sooo good.   The studio is welcoming, motivating but not intimidating … they take the time to explain things in a very positive way …. Love it!",
+        rating: rand(1...5),
+        user_id: rand(1...20)
+    },
+    {
+        testimony: "I was motivated to join Zoezi Fitness  to get into  better shape. I joined the Shred Challenge because I’ve heard nothing but great things and the results from the last challenge impressed me.",
+        rating:  rand(1...5),
+        user_id: rand(1...20)
+    },
+    {
+        testimony: "Since training at Zoezi, I feel stronger and increased ease of movement.  My favorite thing about the workouts are the professional/knowledgeable trainers who are truly interested and invested in making workouts meaningful to meet specific needs.",
+        rating: rand(1...5),
+        user_id: rand(1...20)
+    },
+    {
+        testimony: "Love Zoezi fitness, staff is very friendly and knowledgeable. They push me much further than I would on my own!",
+        rating: rand(1...5),
+        user_id: rand(1...20)
+    },
+    {
+        testimony: "So far these trainers raise the bar for me! So glad I started and excited to make new performance gains! In just a couple of sessions I feel the difference! Well thought out workouts, clean space and knowledgeable trainers! I am sold on this and I myself teach fitness! Thanks FW!",
+        rating: rand(1...5),
+        user_id: rand(1...20)
+    }
+])
+
+Workout.create ([
+    {
+        workout_name: "Barbell push press ",
+        workout_desc: "The rep range for strength training is 4-6 reps and the idea behind this plan is to exert more energy for less reps (which will mean lifting heavier). If it is your first time lifting for strength, don’t go too heavy, use a manageable weight for the first few weeks and then increase the load as the weeks go on."
+    },
+    {
+        workout_name: "Crunches",
+        workout_desc: "This workout is designed to raise your heart rate and get you sweating. The purpose behind this is to push your cardiovascular fitness - when your heart rate is higher you burn more calories."
+    },
+    {
+        workout_name: "Press ups",
+        workout_desc: "This workout is designed to raise your heart rate and get you sweating. The purpose behind this is to push your cardiovascular fitness - when your heart rate is higher you burn more calories."
+    },
+    {
+        workout_name: "Pull ups/assisted pull ups",
+        workout_desc: "The rep range for strength training is 4-6 reps and the idea behind this plan is to exert more energy for less reps (which will mean lifting heavier). If it is your first time lifting for strength, don’t go too heavy, use a manageable weight for the first few weeks and then increase the load as the weeks go on.",
+    },
+    {
+        workout_name: "Seated chest press",
+        workout_desc: "This workout is designed to help men gain strength and lean mass. "
+    }
+])
+
+puts "✅ Done seeding!"
