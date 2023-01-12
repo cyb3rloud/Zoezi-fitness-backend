@@ -1,16 +1,16 @@
-class TodayworkoutsController < ApplicationController
+class WorkoutsController < ApplicationController
     def index
-        todayworkouts = @user.todayworkouts
+        todayworkouts = @client.workouts
         render json: todayworkouts
     end
 
     def show
-        workout = @user.todayworkouts.find(params[:id])
+        workout = @user.workouts.find(params[:id])
         render json: workout
     end
 
     def create
-        workout = @user.todayworkouts.create!(obj_params)
+        workout = @user.workouts.create!(obj_params)
         render json: workout, status: :created 
     end
 
