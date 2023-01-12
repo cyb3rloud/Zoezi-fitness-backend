@@ -425,12 +425,12 @@ Schedule.create ([
 ])
 Testmonial.create ([
     {
-        testimony: "I have been with Fitness Within for one week.  Since joining I am eating healthier and the coaching helps motivate me and the coaches keep encouraging me to do my best!!!  I love the cookbook they gave me because the recipes are simple and sooo good.   The studio is welcoming, motivating but not intimidating … they take the time to explain things in a very positive way …. Love it!",
+        testimony: "I have been with Zoezi Fitness  for one week.  Since joining I am eating healthier and the coaching helps motivate me and the coaches keep encouraging me to do my best!!!  I love the cookbook they gave me because the recipes are simple and sooo good.   The studio is welcoming, motivating but not intimidating … they take the time to explain things in a very positive way …. Love it!",
         rating: rand(1...5),
         user_id: rand(1...20)
     },
     {
-        testimony: "I was motivated to join Fitness Within to get into better shape. I joined the Shred Challenge because I’ve heard nothing but great things and the results from the last challenge impressed me.",
+        testimony: "I was motivated to join Zoezi Fitness  to get into  better shape. I joined the Shred Challenge because I’ve heard nothing but great things and the results from the last challenge impressed me.",
         rating:  rand(1...5),
         user_id: rand(1...20)
     },
