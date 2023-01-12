@@ -6,6 +6,11 @@ class ExercisesController < ApplicationController
         render json: all_exercises
     end
 
+    def show
+        exercise = find_client
+        render json: exercise, status: :ok
+    end
+
     def update
         exercise = Exercise.update!(work_out_params)
         render json: exercise, status: :accepted
@@ -23,6 +28,10 @@ class ExercisesController < ApplicationController
     end
     
     private 
+
+    def find_client
+        Exercise.find(params[:id])
+    end
 
     def work_out_params
         params.permit(:activity, :muscle_group, :exercise_name)
