@@ -327,6 +327,8 @@ User.create ([
 Exercise.create ([
     {
         exercise_name:"cardio training",
+        muscle_group: "shoulders, back, abdominals",
+        activity: "Side planks",
         trainer_id:rand(1...5),
         user_id: rand(1...20),
         workout_id: rand(1...5),
@@ -336,6 +338,8 @@ Exercise.create ([
     },
     {
         exercise_name:"steady state",
+        muscle_group: "abdominals, arms, legs, and back",
+        activity: "Single-leg deadlifts",
         trainer_id:rand(1...10),
         user_id:rand(1...20),
         workout_id: rand(1...5),
@@ -345,6 +349,8 @@ Exercise.create ([
     },
     {
         exercise_name: "Flexibility training",
+        muscle_group: "abdominals, arms, and back",
+        activity: "Dumbbell rows",
         trainer_id: rand(1...10),
         user_id: rand(1...20),
         workout_id:rand(1...5),
@@ -354,6 +360,8 @@ Exercise.create ([
     },
     {
         exercise_name:"Low- and moderate intensity",
+        muscle_group: "abdominals, legs, and back",
+        activity: "squats",
         trainer_id:rand(1...10),
         user_id: rand(1...20),
         workout_id:rand(1...5),
@@ -363,6 +371,8 @@ Exercise.create ([
     },
     {
         exercise_name:"High-intensity and intervals",
+        muscle_group: "arms",
+        activity: "pushups",
         trainer_id: rand(1...10),
         user_id: rand(1...20),
         workout_id: rand(1...5),
@@ -372,6 +382,8 @@ Exercise.create ([
     },
     {
         exercise_name: "Weight training",
+        muscle_group: "legs",
+        activity: "lunges",
         trainer_id: rand(1...10),
         user_id:rand(1...20),
         workout_id: rand(1...5),
