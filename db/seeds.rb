@@ -823,7 +823,7 @@ Exercise.create ([
     }
 ])
 
-Session.create ([
+Schedule.create ([
     {
         trainer_id: rand(1...10),
         user_id: rand(1...20),
