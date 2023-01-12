@@ -532,7 +532,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "be healthier"
     },
     {
@@ -544,7 +544,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "lose weight"
     },
     {
@@ -556,7 +556,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "be healthier"
     },
     {
@@ -568,7 +568,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "be healthier"
     },
     {
@@ -580,7 +580,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal:"get fit"
     },
     {
@@ -592,7 +592,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal:"lose weight"
     },
     {
@@ -604,7 +604,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal:"get fit"
     },
     {
@@ -616,7 +616,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal:"get stronger"
     },
     {
@@ -628,7 +628,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal:"get stronger"
     },
     {
@@ -640,7 +640,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "get fit"
     },
     {
@@ -652,7 +652,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "lose weight"
     },
     {
@@ -664,7 +664,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "lose weight"
     },
     {
@@ -676,7 +676,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "get stronger"
     },
     {
@@ -688,7 +688,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "lose weight"
     },
     {
@@ -700,7 +700,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "Get fit"
     },
     {
@@ -724,7 +724,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal:"Lose weight"
     },
     {
@@ -736,7 +736,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal:"Get fit"
     },
     {
@@ -748,7 +748,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal:"Be healthier"
     },
     {
@@ -760,7 +760,7 @@ User.create ([
         age: rand(15...55),
         weight: rand(30...300)
         height:
-        target_height:
+        current_height:
         user_goal: "loose weight"
     } 
     
