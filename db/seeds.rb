@@ -13,69 +13,69 @@ Trainer.create([
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer1@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },{
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer2@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer3@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer4@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer5@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer6@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },{
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer7@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer8@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer9@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
-        contact: Faker::PhoneNumber.cell_phone_in_e164,
-        email: "trainer12@zoezi.com",
+        contact: Faker::PhoneNumber.cell_phone_with_country_code,
+        email: "trainer10@zoezi.com",
         password: Faker::Alphanumeric.alphanumeric(number: 10)
     }
 ])
@@ -88,8 +88,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "be healthier"
     },
     {
@@ -99,8 +99,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "lose weight"
     },
     {
@@ -110,8 +110,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "be healthier"
     },
     {
@@ -121,8 +121,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "be healthier"
     },
     {
@@ -132,8 +132,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal:"get fit"
     },
     {
@@ -143,8 +143,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal:"lose weight"
     },
     {
@@ -154,8 +154,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal:"get fit"
     },
     {
@@ -165,8 +165,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal:"get stronger"
     },
     {
@@ -176,8 +176,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal:"get stronger"
     },
     {
@@ -187,8 +187,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "get fit"
     },
     {
@@ -198,8 +198,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "lose weight"
     },
     {
@@ -209,8 +209,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "lose weight"
     },
     {
@@ -220,8 +220,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "get stronger"
     },
     {
@@ -231,8 +231,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "lose weight"
     },
     {
@@ -242,8 +242,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "Get fit"
     },
     {
@@ -253,8 +253,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "Get fit"
     },
     {
@@ -264,8 +264,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal:"Lose weight"
     },
     {
@@ -275,8 +275,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal:"Get fit"
     },
     {
@@ -286,8 +286,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal:"Be healthier"
     },
     {
@@ -297,8 +297,8 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height:Faker::Measurement.height,
-        current_weight: Faker::Measurement.weight,
+        height: rand(5...7),
+        current_weight: rand(20...300),
         client_goal: "lose weight"
     } 
     
