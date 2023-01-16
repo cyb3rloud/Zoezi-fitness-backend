@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   resources :testimonials, only: [:index, :create, :show, :update, :destroy]
  
 
-  post "/login", to: "session#create"
-  delete "/logout", to: "session#destroy"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
 
-  post "/signup", to: "session#create"
+  post "/signup", to: "sessions#create"
   get "/me", to: "users#show"
 end

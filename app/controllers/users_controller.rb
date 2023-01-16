@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
-    def create
-        user = User.create(user_params)
+    # wrap_parameters format: []
+    # rescue_from Active::RecordInvalid, with: :render_uprocessable_entity
+    def create  
+        user = User.create!(user_params)
         if user.valid?
             session[:user_id] = user.id
             render json: user, status: :created
@@ -21,7 +23,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:username, :email, :password, :password_confirmation)
+        params.permit(:email, :current_weight, :firstname,  :lastname, :age, :height, :contact,:password,:client_goal)
     end
     
 end

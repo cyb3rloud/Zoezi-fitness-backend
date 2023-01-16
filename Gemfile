@@ -64,3 +64,10 @@ group :test do
 end
 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+
+group :development, :test do
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  
+end
