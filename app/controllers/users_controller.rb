@@ -3,8 +3,6 @@ class UsersController < ApplicationController
     def create   
         user = User.create(user_params)
         # byebug
-
-        render json: user
         if user.valid?
             session[:user_id] = user.id
             render json: user, status: :created
