@@ -33,7 +33,7 @@ class SchedulesController < ApplicationController
     end
 
     def Schedule_params
-        params.permit(:session_start, :date,  :session_end, :trainer_id, :user_id,:session)
+        params.permit(:session_start, :date,  :session_end, :trainer_id, :client_id,:session)
     end
 
 end
