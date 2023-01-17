@@ -1,6 +1,7 @@
 class ClientsController < ApplicationController
     def index
-        render json: Client.all, status: :ok
+        all_clients = Client.all
+        render json: all_clients
     end
 
     def show
