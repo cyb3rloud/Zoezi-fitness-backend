@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_12_123613) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_17_072143) do
   create_table "clients", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_123613) do
     t.string "client_goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
   end
 
   create_table "exercises", force: :cascade do |t|
@@ -65,6 +66,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_123613) do
     t.integer "contact"
     t.string "email"
     t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.integer "current_weight"
+    t.string "firstname"
+    t.string "lastname"
+    t.integer "age"
+    t.integer "height"
+    t.integer "contact"
+    t.string "password"
+    t.string "client_goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
