@@ -53,6 +53,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_123613) do
     t.string "testimony"
     t.string "rating"
     t.integer "client_id"
+    t.string "client_name"
+    t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
