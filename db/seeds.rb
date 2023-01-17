@@ -15,68 +15,87 @@ Trainer.create([
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer1@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
+
     },{
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer2@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
+
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer3@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
+
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer4@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
+
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer5@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
+
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer6@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
     },{
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer7@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
+
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer8@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
+
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer9@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
+
     },
     {
         firstname:  Faker::Name.first_name,
         lastname:  Faker::Name.last_name,
         contact: Faker::PhoneNumber.cell_phone_with_country_code,
         email: "trainer10@zoezi.com",
-        password: Faker::Alphanumeric.alphanumeric(number: 10)
+        password: Faker::Alphanumeric.alphanumeric(number: 10),
+        image_url: Faker::Avatar.image
+
     }
 ])
 
@@ -88,10 +107,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "be healthier",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -100,10 +120,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "lose weight",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -112,10 +133,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "be healthier",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -124,10 +146,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "be healthier",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -136,10 +159,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal:"get fit",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -148,10 +172,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal:"lose weight",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -160,10 +185,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal:"get fit",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image,
     },
     {
         firstname:  Faker::Name.first_name,
@@ -172,10 +198,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal:"get stronger",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -184,10 +211,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal:"get stronger",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -196,10 +224,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "get fit",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -208,10 +237,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "lose weight",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -220,10 +250,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "lose weight",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -232,10 +263,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "get stronger",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -244,10 +276,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "lose weight",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -256,10 +289,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "Get fit",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -268,10 +302,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "Get fit",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -280,10 +315,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal:"Lose weight",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -292,10 +328,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal:"Get fit",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -304,10 +341,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal:"Be healthier",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        image_url: Faker::Avatar.image
     },
     {
         firstname:  Faker::Name.first_name,
@@ -316,10 +354,11 @@ Client.create ([
         password:  Faker::Alphanumeric.alphanumeric(number: 10),
         contact: Faker::PhoneNumber.cell_phone_in_e164,
         age: rand(15...55),
-        height: rand(5...7),
+        height: Faker::Demographic.height(unit: :imperial),
         current_weight: rand(20...300),
         client_goal: "lose weight",
-        username:Faker::Internet.username
+        username:Faker::Internet.username,
+        
     } 
     
 ])
@@ -425,27 +464,34 @@ Testimonial.create ([
     {
         testimony: "I have been with Zoezi Fitness  for one week.  Since joining I am eating healthier and the coaching helps motivate me and the coaches keep encouraging me to do my best!!!  I love the cookbook they gave me because the recipes are simple and sooo good.   The studio is welcoming, motivating but not intimidating … they take the time to explain things in a very positive way …. Love it!",
         rating: rand(1...5),
-        client_id: rand(1...20)
+        client_id: rand(1...20),
     },
     {
         testimony: "I was motivated to join Zoezi Fitness  to get into  better shape. I joined the Shred Challenge because I’ve heard nothing but great things and the results from the last challenge impressed me.",
         rating:  rand(1...5),
-        client_id: rand(1...20)
+        client_id: rand(1...20),
+
+
     },
     {
         testimony: "Since training at Zoezi, I feel stronger and increased ease of movement.  My favorite thing about the workouts are the professional/knowledgeable trainers who are truly interested and invested in making workouts meaningful to meet specific needs.",
         rating: rand(1...5),
-        client_id: rand(1...20)
+        client_id: rand(1...20),
+
     },
     {
         testimony: "Love Zoezi fitness, staff is very friendly and knowledgeable. They push me much further than I would on my own!",
         rating: rand(1...5),
-        client_id: rand(1...20)
+        client_id: rand(1...20),
+
+
     },
     {
         testimony: "So far these trainers raise the bar for me! So glad I started and excited to make new performance gains! In just a couple of sessions I feel the difference! Well thought out workouts, clean space and knowledgeable trainers! I am sold on this and I myself teach fitness! Thanks FW!",
         rating: rand(1...5),
-        client_id: rand(1...20)
+        client_id: rand(1...20),
+
+
     }
 ])
 

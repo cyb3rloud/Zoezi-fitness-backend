@@ -128,6 +128,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.17.0)
     msgpack (1.6.0)
     net-imap (0.3.4)
@@ -140,8 +141,6 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.10-x64-mingw32)
-      racc (~> 1.4)
     nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
     public_suffix (5.0.1)
@@ -194,14 +193,12 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.5.4-x64-mingw32)
-    sqlite3 (1.5.4-x86_64-linux)
+    sqlite3 (1.5.4)
+      mini_portile2 (~> 2.8.0)
     thor (1.2.1)
     timeout (0.3.1)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2022.7)
-      tzinfo (>= 1.0.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -242,7 +239,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.6p219
+   ruby 2.7.4p191
 
 BUNDLED WITH
    2.2.30
