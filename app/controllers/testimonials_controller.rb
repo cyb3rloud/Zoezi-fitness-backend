@@ -33,7 +33,7 @@ class TestimonialsController < ApplicationController
     end
 
     def testimonial_params
-        params.permit(:testimony, :rating)
+        params.permit(:testimony, :rating, :client_id)
     end
 
 end
