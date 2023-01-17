@@ -90,7 +90,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "be healthier"
+        client_goal: "be healthier",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -101,7 +102,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "lose weight"
+        client_goal: "lose weight",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -112,7 +114,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "be healthier"
+        client_goal: "be healthier",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -123,7 +126,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "be healthier"
+        client_goal: "be healthier",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -134,7 +138,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal:"get fit"
+        client_goal:"get fit",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -145,7 +150,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal:"lose weight"
+        client_goal:"lose weight",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -156,7 +162,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal:"get fit"
+        client_goal:"get fit",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -167,7 +174,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal:"get stronger"
+        client_goal:"get stronger",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -178,7 +186,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal:"get stronger"
+        client_goal:"get stronger",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -189,7 +198,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "get fit"
+        client_goal: "get fit",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -200,7 +210,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "lose weight"
+        client_goal: "lose weight",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -211,7 +222,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "lose weight"
+        client_goal: "lose weight",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -222,7 +234,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "get stronger"
+        client_goal: "get stronger",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -233,7 +246,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "lose weight"
+        client_goal: "lose weight",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -244,7 +258,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "Get fit"
+        client_goal: "Get fit",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -255,7 +270,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "Get fit"
+        client_goal: "Get fit",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -266,7 +282,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal:"Lose weight"
+        client_goal:"Lose weight",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -277,7 +294,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal:"Get fit"
+        client_goal:"Get fit",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -288,7 +306,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal:"Be healthier"
+        client_goal:"Be healthier",
+        username:Faker::Internet.username
     },
     {
         firstname:  Faker::Name.first_name,
@@ -299,7 +318,8 @@ Client.create ([
         age: rand(15...55),
         height: rand(5...7),
         current_weight: rand(20...300),
-        client_goal: "lose weight"
+        client_goal: "lose weight",
+        username:Faker::Internet.username
     } 
     
 ])
