@@ -1,7 +1,7 @@
 class Trainer < ApplicationRecord
     has_many :schedules
     has_many :workouts
-    has_many :users, through: :schedules
+    has_many :clients, through: :schedules
     has_many :exercises, through: :workouts
 
     validates :firstname, presence: true

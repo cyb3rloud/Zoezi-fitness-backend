@@ -33,7 +33,7 @@ class TrainersController < ApplicationController
     end
 
     def trainer_params
-        params.permit(:firstname, :lastname,  :contact, :email, :password)
+        params.permit(:firstname, :lastname,  :contact, :email, :password, :image_url)
     end
 
 end
