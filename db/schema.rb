@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_17_110351) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_18_061119) do
   create_table "clients", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
@@ -55,10 +55,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_110351) do
     t.string "testimony"
     t.string "rating"
     t.integer "client_id"
-    t.string "client_name"
-    t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "client_image_url"
+    t.string "client_username"
   end
 
   create_table "trainers", force: :cascade do |t|

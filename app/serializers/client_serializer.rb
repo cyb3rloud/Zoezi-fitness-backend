@@ -3,4 +3,5 @@ class ClientSerializer < ActiveModel::Serializer
 
   # has_many :exercises
   has_many :testimonials
+  has_many :trainers
 end

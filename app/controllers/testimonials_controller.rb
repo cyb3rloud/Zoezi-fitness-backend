@@ -1,17 +1,17 @@
 class TestimonialsController < ApplicationController
 
     def index
-      render json: Testimonial.all, status: :ok
+      render json: Testimonial.all, include: [:client], status: :ok
     end
 
     def show
         testimonial = find_testimonial
-      render json: testimonial, status: :ok
+      render json: testimonial, include: [:client], status: :ok
     end
 
     def create
         testimonial = Testimonial.create!(testimonial_params)
-        render json: testimonial, status: :created
+        render json: testimonial, include: [:client], status: :created
     end
 
     def update
@@ -33,7 +33,7 @@ class TestimonialsController < ApplicationController
     end
 
     def testimonial_params
-        params.permit(:testimony, :rating, :client_id)
+        params.permit(:testimony, :rating, :client_id, :client_username)
     end
 
 end

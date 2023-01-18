@@ -8,7 +8,10 @@ class ApplicationController < ActionController::API
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
 
-  def record_not_found
+
+  private
+  
+    def record_not_found
     render json: { error: "This record does not exist!" }, status: :not_found
   end
 
@@ -17,6 +20,9 @@ class ApplicationController < ActionController::API
   end   
 
   # def authorize
-  #   return render json: { error: ["Not Authorized"]}, status: :unauthorized unless session.include? :user_id 
-  # end    
+  #   # byebug
+  #   @current_user = User.find_by_id(session[:user_id])
+  #   render json: { errors: ["Not authorized"] }, status: :unauthorized unless @current_user
+  # end
+   
 end

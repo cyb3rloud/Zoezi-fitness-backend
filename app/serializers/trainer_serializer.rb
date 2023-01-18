@@ -3,4 +3,6 @@ class TrainerSerializer < ActiveModel::Serializer
 
   has_many  :clients 
   has_many :exercises
+  has_many :workouts
+  has_many :schedules
 end

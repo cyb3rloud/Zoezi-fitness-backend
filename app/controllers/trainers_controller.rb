@@ -1,7 +1,7 @@
 class TrainersController < ApplicationController
 
     def index
-      render json: Trainer.all, status: :ok
+      render json: Trainer.all, include: [:clients, :workouts, :schedules, :exercises ], status: :ok
     end
 
     def show

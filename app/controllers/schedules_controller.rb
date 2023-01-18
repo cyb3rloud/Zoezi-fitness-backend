@@ -1,17 +1,17 @@
 class SchedulesController < ApplicationController
 
     def index
-      render json: Schedule.all, status: :ok
+      render json: Schedule.all, include: [:client, :trainer], status: :ok
     end
 
     def show
       schedule = find_schedule
-      render json: schedule, status: :ok
+      render json: schedule, include: [:client, :trainer], status: :ok
     end
 
     def create
         schedule = Schedule.create!(schedule_params)
-        render json: schedule, status: :created
+        render json: schedule, include: [:client, :trainer], status: :created
     end
 
     def update

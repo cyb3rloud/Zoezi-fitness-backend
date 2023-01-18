@@ -1,17 +1,17 @@
 class ClientsController < ApplicationController
     def index
         all_clients = Client.all
-        render json: all_clients
+        render json: all_clients, include: [:trainers, :schedules, :exercises, :workouts], status: :ok
     end
 
     def show
         client = find_client
-        render json: client, status: :ok
+        render json: client, include: [:trainers, :schedules, :exercises, :workouts], status: :ok
     end
 
     def create
         client = Client.create!(client_params)
-        render json: client, status: :created
+        render json: client, include: [:trainers, :schedules, :exercises, :workouts], status: :created
     end
 
     def update
@@ -33,6 +33,7 @@ class ClientsController < ApplicationController
     end
 
     def client_params
-        params.permit(:username, :password, :password_confirmation, :weight, :height, :location, :name, :profile_image, :age, :image_url)
+        # params.permit(:username, :password, :password_confirmation, :weight, :height, :location, :name, :profile_image, :age, :image_url)
+        params.permit(:password, :current_weight, :client_goal, :contact, :height, :location, :firstname, :lastname, :email, :profile_image, :age, :image_url)
     end
 end
