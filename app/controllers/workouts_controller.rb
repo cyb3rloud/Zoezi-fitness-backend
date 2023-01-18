@@ -21,6 +21,6 @@ class WorkoutsController < ApplicationController
     end
 
     def obj_params
-        params.permit(:activity, :muscle_group, :reps, :sets, :client_id, :image)
+        params.permit(:workout_name, :trainer_id)
     end
 end

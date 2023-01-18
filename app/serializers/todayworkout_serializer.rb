@@ -1,6 +1,7 @@
 class TodayworkoutSerializer < ActiveModel::Serializer
   attributes :id, :workout_name,:trainer_id
-  has_one :client
+  belongs_to :client
   has_many :exercises
+  has_many :trainers
   
 end
