@@ -1,5 +1,5 @@
 class Workout < ApplicationRecord
-    has_many :clients
+    # belongs_to :clients
     has_many :exercises
     has_many :trainers
 
