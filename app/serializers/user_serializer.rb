@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :firstname, :lastname, :username, :email, :age, :height, :current_weight, :contact, :goal, :trainer_id
+  attributes :id, :firstname, :lastname, :username, :email, :age, :height, :current_weight, :contact, :goal, :trainer_id, :image_url
   # :trainer_id, :trainer, :workouts, :schedules, :exercises, :trainers, :testimonials
 
   # has_many :workouts
