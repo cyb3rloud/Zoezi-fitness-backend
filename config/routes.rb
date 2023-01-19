@@ -1,16 +1,34 @@
 Rails.application.routes.draw do
+  resources :testimonials
+  resources :exercises
+  resources :workouts
+  resources :schedules
+  resources :trainers
+  resources :users
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :clients, only: [:index, :create, :show, :update, :destroy]
-  resources :trainers, only: [:index, :create, :show, :update, :destroy]
-  resources :exercises, only: [:index, :create, :show, :update, :destroy]
-  resources :workouts, only: [:index, :create, :show]
-  resources :schedules, only: [:index, :create, :show, :update, :destroy]
-  resources :testimonials, only: [:index, :create, :show, :update, :destroy]
- 
-
+  # Defines the root path route ("/")
+  # root "articles#index"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
   post "/register", to: "users#create"
   get "/me", to: "users#show"
+
+  get "/users", to: "users#index"
+
+  # get '/users' to 'users#index'
+  # post '/testimonials' to 'testimonials#create'
+
+
+  # get 'users/:id' to 'users#show'
+  # get 'trainers/:id' to 'trainers#show'
+  # get 'schedules/:id' to 'schedules#show'
+  # get 'workouts/:id' to 'workouts#show'
+  # get 'exercises/:id' to 'exercises#show'
+  # get 'testimonials/:id' to 'testimonials#show'
+
+
+
+  
 end

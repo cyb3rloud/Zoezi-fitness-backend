@@ -1,40 +1,35 @@
 class ExercisesController < ApplicationController
-    # skip_before_action :authorize, only: :index
-    
+
     def index
-        all_exercises = Exercise.all
-        render json: all_exercises
+        exercises = Exercise.all
+        render json: exercises, include: [:workouts, :trainers, :schedules], status: :ok
     end
 
     def show
-        exercise = find_client
-        render json: exercise, status: :ok
-    end
-
-    def update
-        exercise = Exercise.update!(work_out_params)
-        render json: exercise, status: :accepted
+        exercise = Exercise.find(params[:id])
+        render json: exercise, include: [:workouts, :trainers, :schedules], status: :ok
     end
 
     def create
-        new_workout = Exercise.create!(work_out_params)
-        render json: new_workout, status: :created
+        exercise = Exercise.create!(exercise_params)
+        render json: exercise, status: :created
+    end
+
+    def update
+        exercise = Exercise.find(params[:id])
+        exercise.update!(exercise_params)
+        render json: exercise, status: :ok
     end
 
     def destroy
-        delete_workout = Exercise.find(params[:id])
-        delete_workout.destroy
-        head :no_content
-    end
-    
-    private 
-
-    def find_client
-        Exercise.find(params[:id])
+        exercise = Exercise.find(params[:id])
+        exercise.destroy
+        render json: {message: "Exercise deleted"}, status: :ok
     end
 
-    def work_out_params
-        params.permit(:activity, :muscle_group, :exercise_name, :trainer_id, :client_id, :workout_id)
-    end
+    private
 
+    def exercise_params
+        params.permit(:activity, :muscle_group, :exercise_name, :trainer_id, :user_id, :workout_id, :schedule_id, :time_start, :time_end)
+    end
 end

@@ -1,39 +1,35 @@
 class SchedulesController < ApplicationController
 
     def index
-      render json: Schedule.all, include: [:client, :trainer], status: :ok
+        schedules = Schedule.all
+        render json: schedules, include: [:exercises], status: :ok
     end
 
     def show
-      schedule = find_schedule
-      render json: schedule, include: [:client, :trainer], status: :ok
+        schedule = Schedule.find(params[:id])
+        render json: schedule, include: [:workouts, :trainers, :exercises, :users], status: :ok
     end
 
     def create
         schedule = Schedule.create!(schedule_params)
-        render json: schedule, include: [:client, :trainer], status: :created
+        render json: schedule, include: [:workouts, :trainers, :exercises, :users], status: :created
     end
 
     def update
-        schedule = find_schedule
-        Schedule.update!(schedule_params)
-        render json: schedule, status: :accepted
+        schedule = Schedule.find(params[:id])
+        schedule.update!(schedule_params)
+        render json: schedule, status: :ok
     end
 
     def destroy
-        schedule = find_schedule
-        Schedule.destroy
-        head :no_content
+        schedule = Schedule.find(params[:id])
+        schedule.destroy
+        render json: {message: "Schedule deleted"}, status: :ok
     end
 
     private
 
-    def find_schedule
-        Schedule.find(params[:id])
+    def schedule_params
+        params.permit(:trainer_id, :user_id, :date, :session, :session_start, :session_end)
     end
-
-    def Schedule_params
-        params.permit(:session_start, :date,  :session_end, :trainer_id, :client_id,:session)
-    end
-
 end

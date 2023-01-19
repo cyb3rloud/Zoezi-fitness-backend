@@ -1,5 +1,5 @@
 class Exercise < ApplicationRecord
-    belongs_to :client
+    belongs_to :user
     belongs_to :trainer
     belongs_to :workout
     
