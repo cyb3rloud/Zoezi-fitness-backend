@@ -1,6 +1,5 @@
 class Testimonial < ApplicationRecord
-    # has_many :users
-    belongs_to :client  
-    
+    belongs_to :user
+
     validates :testimony, presence: true
 end
