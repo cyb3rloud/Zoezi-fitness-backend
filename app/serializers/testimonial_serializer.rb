@@ -1,5 +1,5 @@
 class TestimonialSerializer < ActiveModel::Serializer
-  attributes :id, :testimony, :user_id, :rating
+  attributes :id, :testimony, :rating
 
   belongs_to :user
   

@@ -3,7 +3,7 @@ skip_before_action:verify_authenticity_token
     wrap_parameters format: []
     # protect_from_forgery with: :exception
     # before_action :authorize
-    # before_action :set_current_user
+    before_action :set_current_user
 
   include ActionController::Cookies
   

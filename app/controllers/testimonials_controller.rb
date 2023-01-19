@@ -11,7 +11,7 @@ class TestimonialsController < ApplicationController
     end
 
     def create
-        testimonial = Testimonial.create!(testimonial_params)
+        testimonial = Testimonial.create!(user_id: @current_user.id, testimony: params[:testimony], rating: params[:rating])
         render json: testimonial, include: [:users], status: :created
     end
 
