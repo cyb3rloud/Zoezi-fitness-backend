@@ -6,6 +6,8 @@ class User < ApplicationRecord
     has_many :testimonials
     has_many :schedules
     has_many :exercises
+    has_many :carts
+    has_many :cart_items, through: :carts
     # has_many :trainers, through: :schedules
     # has_many :exercises, through: :workouts
 

@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   resources :schedules
   resources :trainers
   resources :users
+  resources :items
+  resources :cart_items
+  resources :carts
+  
+  patch '/users/:id', to: 'users#edit'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -16,6 +22,8 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
 
   get "/users", to: "users#index"
+
+  post '/cart_items', to: 'cart_items#create'
 
   # get '/users' to 'users#index'
   # post '/testimonials' to 'testimonials#create'

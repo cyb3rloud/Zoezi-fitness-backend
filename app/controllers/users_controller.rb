@@ -29,11 +29,13 @@ class UsersController < ApplicationController
 
     end
 
-    def update
-        user = User.find_by(params[:id])
-        user.update!(user_params)
-        render json: user , status: :ok
-    end
+    def edit 
+        # byebug
+        user = User.find(params[:id])
+        user.update_attribute(:username, user_params[:username])
+        user.update_attribute(:email, user_params[:email])
+        render json: user
+    end 
 
     def destroy
         user = User.find(params[:id])
@@ -44,7 +46,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:firstname, :lastname, :username, :email, :password, :password_confirmation, :age, :height, :current_weight, :contact, :trainer_id)
+        params.permit(:firstname, :lastname, :username, :email, :password, :password_confirmation, :age, :height, :current_weight, :contact, :trainer_id, :billing_address, :shipping_address)
     end
 
     def record_invalid
