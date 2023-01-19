@@ -3,7 +3,7 @@ class WorkoutSerializer < ActiveModel::Serializer
 
   belongs_to :trainer
   has_many :exercises
-  has_many :schedules, through: :exercises
-  has_many :users, through: :schedules
+  # has_many :schedules, through: :exercises
+  # has_many :users, through: :schedules
 
 end
