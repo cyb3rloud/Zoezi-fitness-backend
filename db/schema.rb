@@ -10,30 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_17_110351) do
-  create_table "clients", force: :cascade do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.string "email"
-    t.string "password"
-    t.integer "contact"
-    t.integer "age"
-    t.string "height"
-    t.string "current_weight"
-    t.string "client_goal"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "username"
-    t.string "image_url"
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2023_01_18_195143) do
   create_table "exercises", force: :cascade do |t|
     t.string "exercise_name"
     t.integer "trainer_id"
+    t.integer "user_id"
+    t.integer "schedule_id"
+    t.integer "workout_id"
     t.string "muscle_group"
     t.string "activity"
-    t.integer "client_id"
-    t.integer "workout_id"
     t.time "time_start"
     t.time "time_end"
     t.datetime "created_at", null: false
@@ -42,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_110351) do
 
   create_table "schedules", force: :cascade do |t|
     t.integer "trainer_id"
-    t.integer "client_id"
+    t.integer "user_id"
     t.string "date"
     t.string "session"
     t.time "session_start"
@@ -54,9 +39,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_110351) do
   create_table "testimonials", force: :cascade do |t|
     t.string "testimony"
     t.string "rating"
-    t.integer "client_id"
-    t.string "client_name"
-    t.string "avatar"
+    t.integer "user_id"
+    t.string "user_username"
+    t.string "user_image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -64,25 +49,28 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_110351) do
   create_table "trainers", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
-    t.integer "contact"
     t.string "email"
-    t.string "password"
+    t.string "image_url"
+    t.integer "contact"
+    t.string "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_url"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
-    t.integer "current_weight"
     t.string "firstname"
     t.string "lastname"
-    t.integer "age"
-    t.integer "height"
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
+    t.string "image_url"
     t.integer "contact"
-    t.string "password"
-    t.string "client_goal"
+    t.string "role"
+    t.integer "age"
+    t.string "height"
+    t.string "current_weight"
+    t.string "goal"
+    t.integer "trainer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -90,6 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_110351) do
   create_table "workouts", force: :cascade do |t|
     t.string "workout_name"
     t.integer "trainer_id"
+    t.integer "schedule_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

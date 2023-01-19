@@ -1,7 +1,11 @@
 class Workout < ApplicationRecord
-    has_many :clients
+
+    # belongs_to :user
+    belongs_to :trainer
+    belongs_to :schedule
     has_many :exercises
-    has_many :trainers
 
     validates :workout_name, presence: true
+
+
 end

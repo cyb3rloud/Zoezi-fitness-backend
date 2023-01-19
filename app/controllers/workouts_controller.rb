@@ -5,7 +5,7 @@ class WorkoutsController < ApplicationController
     end
 
     def show
-        workout = find_course
+        workout = find_workout
         render json: workout, status: :ok
     end
 
@@ -16,11 +16,11 @@ class WorkoutsController < ApplicationController
 
     private
 
-    def find_course
+    def find_workout
         Workout.find(params[:id])
     end
 
     def obj_params
-        params.permit(:activity, :muscle_group, :reps, :sets, :client_id, :image)
+        params.permit(:workout_name, :trainer_id)
     end
 end

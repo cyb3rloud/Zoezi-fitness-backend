@@ -1,6 +1,8 @@
 class TrainerSerializer < ActiveModel::Serializer
-  attributes :id, :email, :firstname,  :lastname, :password, :contact, :image_url
-
-  has_many  :clients 
+  attributes :id, :firstname, :lastname, :email, :contact, :image_url
+  
+  has_many :users
+  has_many :schedules
+  has_many :workouts
   has_many :exercises
 end

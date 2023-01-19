@@ -1,6 +1,9 @@
 class ScheduleSerializer < ActiveModel::Serializer
-  attributes :id, :session_start, :date,  :session_end, :trainer_id, :client_id,:session
+  attributes :id, :session, :session_start, :session_end, :date, :trainer_id, :user_id
 
-  has_many :client
   belongs_to :trainer
+  has_many :workouts
+  has_many :exercises, through: :workouts
+  has_many :users
+
 end

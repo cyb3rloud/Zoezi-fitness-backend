@@ -1,39 +1,37 @@
 class TestimonialsController < ApplicationController
 
     def index
-      render json: Testimonial.all, status: :ok
+        testimonials = Testimonial.all
+        render json: testimonials, status: :ok
     end
 
     def show
-        testimonial = find_testimonial
-      render json: testimonial, status: :ok
+        testimonial = Testimonial.find(params[:id])
+        render json: testimonial, status: :ok
     end
 
     def create
         testimonial = Testimonial.create!(testimonial_params)
-        render json: testimonial, status: :created
+        render json: testimonial, include: [:users], status: :created
     end
 
     def update
-        testimonial = find_testimonial
+        testimonial = Testimonial.find(params[:id])
         testimonial.update!(testimonial_params)
-        render json: testimonial, status: :accepted
+        render json: testimonial, status: :ok
     end
 
     def destroy
-        testimonial = find_testimonial
+        testimonial = Testimonial.find(params[:id])
         testimonial.destroy
-        head :no_content
+        render json: {message: "Testimonial deleted"}, status: :ok
     end
 
     private
 
-    def find_testimonial
-        Testimonial.find(params[:id])
-    end
-
     def testimonial_params
-        params.permit(:testimony, :rating, :client_id)
+        params.permit(:user_id, :testimonial, :rating)
     end
 
 end
+

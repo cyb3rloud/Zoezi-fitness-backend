@@ -1,39 +1,35 @@
 class TrainersController < ApplicationController
 
     def index
-      render json: Trainer.all, status: :ok
+        trainers = Trainer.all
+        render json: trainers, include: [:users, :schedules, :workouts, :exercises], status: :ok
     end
 
     def show
-        trainer = find_trainer
-      render json: trainer, status: :ok
+        trainer = Trainer.find(params[:id])
+        render json: trainer, include: [:users, :schedules, :workouts, :exercises], status: :ok
     end
 
     def create
         trainer = Trainer.create!(trainer_params)
-        render json: trainer, status: :created
+        render json: trainer, include: [:users, :schedules, :workouts, :exercises], status: :created
     end
 
     def update
-        trainer = find_trainer
+        trainer = Trainer.find(params[:id])
         trainer.update!(trainer_params)
-        render json: trainer, status: :accepted
+        render json: trainer, status: :ok
     end
 
     def destroy
-        trainer = find_trainer
+        trainer = Trainer.find(params[:id])
         trainer.destroy
-        head :no_content
+        render json: {message: "Trainer deleted"}, status: :ok
     end
 
     private
 
-    def find_trainer
-        Trainer.find(params[:id])
-    end
-
     def trainer_params
-        params.permit(:firstname, :lastname,  :contact, :email, :password, :image_url)
+        params.permit(:username,:firstname, :lastname, :email, :phone, :bio, :image)
     end
-
 end
