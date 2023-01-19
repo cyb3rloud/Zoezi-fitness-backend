@@ -444,7 +444,7 @@ User.create ([
     
 ])
 
-Exercise.create! ([
+Exercise.create ([
     {
         exercise_name:"cardio training",
         muscle_group: "shoulders, back, abdominals",
