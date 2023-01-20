@@ -11,7 +11,7 @@ class DashboardTrainersController < ApplicationController
     end
 
     def create
-        dashboard_trainer = DashboardTrainer.create!(trainer_params)
+        dashboard_trainer = DashboardTrainer.create!(_dashboard_trainer_params)
         render json: dashboard_trainer, include: [:users, :schedules, :workouts, :exercises], status: :created
     end
 
