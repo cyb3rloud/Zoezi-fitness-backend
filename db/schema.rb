@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_18_195143) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_20_034031) do
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "cart_id"
+    t.integer "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.integer "user_id"
+    t.boolean "purchase"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dashboard_trainers", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "email"
+    t.string "image_url"
+    t.integer "contact"
+    t.string "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "exercises", force: :cascade do |t|
     t.string "exercise_name"
     t.integer "trainer_id"
@@ -21,6 +46,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_195143) do
     t.string "activity"
     t.time "time_start"
     t.time "time_end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "category"
+    t.string "description"
+    t.string "movie"
+    t.string "price"
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -73,6 +110,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_195143) do
     t.integer "trainer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "associations"
+    t.string "billing_address"
+    t.string "shipping_address"
   end
 
   create_table "workouts", force: :cascade do |t|
