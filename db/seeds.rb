@@ -444,74 +444,7 @@ User.create ([
     
 ])
 
-Exercise.create ([
-    {
-        exercise_name:"cardio training",
-        muscle_group: "shoulders, back, abdominals",
-        activity: "Side planks",
-        trainer_id:rand(1...5),
-        user_id: rand(1...20),
-        schedule_id: rand(1...5),
-        workout_id: rand(1...5),
-        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
-        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
-    },
-    {
-        exercise_name:"steady state",
-        muscle_group: "abdominals, arms, legs, and back",
-        activity: "Single-leg deadlifts",
-        trainer_id:rand(1...10),
-        user_id:rand(1...20),
-        workout_id: rand(1...5),
-        schedule_id: rand(1...5),
-        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
-        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon)
-    },
-    {
-        exercise_name: "Flexibility training",
-        muscle_group: "abdominals, arms, and back",
-        activity: "Dumbbell rows",
-        trainer_id: rand(1...10),
-        user_id: rand(1...20),
-        schedule_id: rand(1...5),
-        workout_id:rand(1...5),
-        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
-        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
-    },
-    {
-        exercise_name:"Low- and moderate intensity",
-        muscle_group: "abdominals, legs, and back",
-        activity: "squats",
-        trainer_id:rand(1...10),
-        user_id: rand(1...20),
-        workout_id:rand(1...5),
-        schedule_id: rand(1...5),
-        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
-        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
-    },
-    {
-        exercise_name:"High-intensity and intervals",
-        muscle_group: "arms",
-        activity: "pushups",
-        trainer_id: rand(1...10),
-        user_id: rand(1...20),
-        workout_id: rand(1...5),
-        schedule_id: rand(1...5),
-        time_start:Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
-        time_end:Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
-    },
-    {
-        exercise_name: "Weight training",
-        muscle_group: "legs",
-        activity: "lunges",
-        trainer_id: rand(1...10),
-        user_id:rand(1...20),
-        workout_id: rand(1...5),
-        schedule_id: rand(1...5),
-        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
-        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
-    }
-])
+
 
 Schedule.create ([
     {
@@ -618,6 +551,75 @@ Workout.create ([
         workout_name: "Seated chest press",
         trainer_id: rand(1...10),
         schedule_id: rand(1...10)
+    }
+])
+
+Exercise.create! ([
+    {
+        exercise_name:"cardio training",
+        muscle_group: "shoulders, back, abdominals",
+        activity: "Side planks",
+        trainer_id:rand(1...5),
+        user_id: rand(1...20),
+        schedule_id: rand(1...5),
+        workout_id: rand(1...5),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+    },
+    {
+        exercise_name:"steady state",
+        muscle_group: "abdominals, arms, legs, and back",
+        activity: "Single-leg deadlifts",
+        trainer_id:rand(1...10),
+        user_id:rand(1...20),
+        workout_id: rand(1...5),
+        schedule_id: rand(1...5),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon)
+    },
+    {
+        exercise_name: "Flexibility training",
+        muscle_group: "abdominals, arms, and back",
+        activity: "Dumbbell rows",
+        trainer_id: rand(1...10),
+        user_id: rand(1...20),
+        schedule_id: rand(1...5),
+        workout_id:rand(1...5),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :evening),
+    },
+    {
+        exercise_name:"Low- and moderate intensity",
+        muscle_group: "abdominals, legs, and back",
+        activity: "squats",
+        trainer_id:rand(1...10),
+        user_id: rand(1...20),
+        workout_id:rand(1...5),
+        schedule_id: rand(1...5),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+    },
+    {
+        exercise_name:"High-intensity and intervals",
+        muscle_group: "arms",
+        activity: "pushups",
+        trainer_id: rand(1...10),
+        user_id: rand(1...20),
+        workout_id: rand(1...5),
+        schedule_id: rand(1...5),
+        time_start:Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
+        time_end:Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+    },
+    {
+        exercise_name: "Weight training",
+        muscle_group: "legs",
+        activity: "lunges",
+        trainer_id: rand(1...10),
+        user_id:rand(1...20),
+        workout_id: rand(1...5),
+        schedule_id: rand(1...5),
+        time_start: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :afternoon),
+        time_end: Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :morning),
     }
 ])
 
