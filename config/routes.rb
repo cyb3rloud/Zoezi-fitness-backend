@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  resources :dashboard_trainers
   resources :testimonials
   resources :exercises
   resources :workouts
   resources :schedules
   resources :trainers
   resources :users
+  resources :dashboard_trainers
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
