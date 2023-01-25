@@ -57,6 +57,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_20_034031) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "trainer_dashboards", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "email"
+    t.string "image_url"
+    t.integer "contact"
+    t.string "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "trainers", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
